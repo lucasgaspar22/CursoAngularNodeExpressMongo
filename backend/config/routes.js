@@ -1,4 +1,4 @@
-const express = require ('express')
+const express = require('express')
 
 module.exports = function(server){
   //API Routes
@@ -7,5 +7,8 @@ module.exports = function(server){
 
   //rotas da api
   const billingCycleService = require('../api/billingCycle/billingCycleService')
-  billingCycleService.register = (router, '/billingCycles')
+  billingCycleService.register(router, '/billingCycles')
+
+  const billingSummaryService = require('../api/billingSummary/billingSummaryService')
+  router.route('/billingSummary').get(billingSummaryService.getSummary)
 }
