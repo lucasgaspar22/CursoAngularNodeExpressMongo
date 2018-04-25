@@ -1,0 +1,9 @@
+html {background-color: #ecf0f5;}
+
+.main-footer{position: fixed ;bottom: 0px;}
+
+#toast-conatiner{top:500px;}
+.table-actions{width:140px;}
+@media (max-width: 575.98px) {
+  aside {width: 10px;}
+}

@@ -1,0 +1,21 @@
+<div class="box-body" ng-controller= "BillingCycleController as bcCtrl">
+  <table class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <tr>
+      <th>Nome</th>
+      <th>Mês</th>
+      <th>Ano</th>
+      <th>Ações</th>
+    </tr>
+    <tbody>
+      <tr ng-repeat="billingCycle in bcCtrl.billingCycles">
+        <td>{{billingCycle.name}}</td>
+        <td>{{billingCycle.month}}</td>
+        <td>{{billingCycle.year}}</td>
+        <td class="table-actions">
+          <button class = "btn btn-warning" ng-click="bcCtrl.showTabUpdate(billingCycle)"><i class="fa fa-pencil"></i></button>
+          <button class = "btn btn-danger"  ng-click="bcCtrl.showTabDelete(billingCycle)"><i class="fa fa-trash-o"></i></button>
+       </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
